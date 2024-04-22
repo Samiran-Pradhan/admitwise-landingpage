@@ -14,22 +14,18 @@ import SignUp from './component/SignUp.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter,Routes,Route,} from 'react-router-dom'
 import LogIn from './component/LogIn.jsx'
+import Main from './component/Main.jsx'
 
 function App() {
   return (
     <>
-      {/* <Navbar/>
-      <Home/>
-      <Partners/>
-      <Services/>
-      <About/>
-      <Testimonial/>
-      <Soumik/>
-      <MyFooter/> */}
+      
       <BrowserRouter>
         <Routes>
+
           <Route path='/register' element={<SignUp/>}></Route>
           <Route path='/login' element={<LogIn/>}></Route>
+          <Route path='/*' element={<Main/>}></Route>
         </Routes>
       </BrowserRouter>
     </>
