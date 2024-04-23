@@ -23,9 +23,6 @@ const About = () => {
                 <p>We reached here with our hard work and dedication</p>
                 </div>
 
-                <div>
-                    <h1>add korte hobe </h1>
-                </div>
             </div>
         </div>
 

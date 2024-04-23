@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../assets/logo.png'
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,6 +33,7 @@ const Navbar = () => {
         {link: "FAQ", path: "faq"},
 
     ];
+    const navigate=useNavigate();
   return (
     <div>
         <header className='w-full bg-white md:bg-transparent fixed top-0 left-0 right-0'>
@@ -46,9 +48,12 @@ const Navbar = () => {
                      <li className='block text-base text-grey900 hover:text-brandPrimary first:font-medium '>Testimonials</li>
                      <li className='block text-base text-grey900 hover:text-brandPrimary first:font-medium '>FAQ</li>
                     </ul>
+                    {/* <div className='space-x-12 lg:flex items-center'>
+                        <button className='bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey' onClick={()=>navigate('/login')}>Log In</button>
+                    </div> */}
 
                     <div className='space-x-12 lg:flex items-center'>
-                        <button className='bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey'>Sign Up</button>
+                        <button className='bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey' onClick={()=>navigate('/register')}>Sign Up</button>
                     </div>
                 </div>
             </nav>
